@@ -34,6 +34,8 @@
   transition: none;
   transform: none;
   will-change: auto;
+  border-radius: 10px;
+  animation: none;
 }
 
 .highlight-element:hover {
@@ -74,6 +76,30 @@
   max-width: 1400px;
   margin: 0 auto;
   transform: none;
+}
+
+.heroImg::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 225, 255, 0.45) 0%,
+    rgba(64, 207, 255, 0.35) 25%,
+    rgba(32, 175, 255, 0.25) 40%,
+    rgba(13, 136, 255, 0.12) 60%,
+    transparent 75%
+  );
+  transform: translate(-50%, -40%);
+  mix-blend-mode: screen;
+  filter: blur(25px);
+  z-index: 1;
+  pointer-events: none;
+  animation: innerGlow 3s infinite alternate ease-in-out;
 }
 
 .heroImg img {
@@ -493,11 +519,15 @@
   
   .highlight-element {
     transform: none !important;
+    animation: none !important;
+    box-shadow: none !important;
   }
   
   .highlight-element:hover {
     filter: none !important;
     transform: none !important;
+    animation: none !important;
+    box-shadow: none !important;
   }
   
   .heroButton {
@@ -537,6 +567,14 @@
     width: 8px;
     height: 8px;
     transform: translateY(-5px) rotate(45deg) !important;
+  }
+
+  .heroImg::before {
+    width: 200px !important;
+    height: 200px !important;
+    transform: translate(-50%, -40%) !important;
+    animation: none !important;
+    opacity: 0.8 !important;
   }
 }
 
@@ -592,5 +630,34 @@
   100% {
     opacity: 1;
     transform: translateY(10px) scale(1);
+  }
+}
+
+@keyframes neonBorder {
+  0% {
+    box-shadow: 
+      0 0 5px rgba(0, 195, 255, 0.5),
+      0 0 10px rgba(0, 195, 255, 0.3);
+  }
+  100% {
+    box-shadow: 
+      0 0 10px rgba(0, 195, 255, 0.7),
+      0 0 20px rgba(0, 195, 255, 0.5),
+      0 0 30px rgba(0, 195, 255, 0.3);
+  }
+}
+
+@keyframes innerGlow {
+  0% {
+    width: 850px;
+    height: 850px;
+    opacity: 0.75;
+    filter: blur(25px);
+  }
+  100% {
+    width: 950px;
+    height: 950px;
+    opacity: 0.9;
+    filter: blur(28px);
   }
 }
