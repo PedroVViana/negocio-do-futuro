@@ -1,0 +1,205 @@
+.Price {
+  position: relative;
+  gap: 150px;
+  padding: 50px 0px;
+  background: url(../../assets/Photo/price.bg.png) no-repeat center center;
+  background-size: 100% 100%;
+  min-height: 120vh;
+}
+
+.container-price {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Três colunas */
+  gap: 20px; /* Espaçamento entre os itens */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container-price li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-price .price-item, .container-price .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  width: 350px;
+}
+
+.price-item h2 {
+  font-size: 1.75rem;
+  color: #fff;
+}
+
+.price-item p, .container-price .description {
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #c7c7c7;
+}
+
+.container-price .description {
+  font-size: 1rem;
+}
+
+.container-price .price-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  width: 350px;
+  background: #111;
+  border: 2px solid #333;
+  border-radius: 5px;
+  transition: .5s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container-price .price-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-10px);
+  transition: .5s;
+}
+
+.price-card h3 {
+  font-size: 1.5rem;
+  color: #c7c7c7;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.price-card h4 {
+  font-size: 2rem;
+  color: #c7c7c7;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.price-card h4 span {
+  font-size: 1rem;
+  color: #c7c7c7;
+}
+
+.price-card h4 i {
+  font-size: 6rem;
+  color: #c7c7c7;
+}
+
+.price-card p {
+  font-size: 0.55rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #c7c7c7;
+}
+
+.price-card a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(to right, #00c3ff, #006aff);
+  font-weight: 700;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 
+  0 0 10px #00c3ff,
+  0 0 20px rgba(0, 195, 255, 0.7),
+  0 0 30px rgba(0, 122, 255, 0.5),
+  inset 0 0 15px rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(0, 225, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  animation: neonPulse 1.5s infinite alternate ease-in-out, buttonAppear 1.2s ease-out forwards;
+  opacity: 0;
+  z-index: 2;
+}
+
+.price-card a::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(90deg, #00e1ff, #00a2ff, #0057ff, #00a2ff, #00e1ff);
+    background-size: 400% 400%;
+    border-radius: 50px;
+    opacity: 0.7;
+    animation: neonShimmer 3s ease infinite;
+    filter: blur(8px);
+  }
+
+  .price-card a:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+      0 0 15px #00c3ff,
+      0 0 25px rgba(0, 195, 255, 0.8),
+      0 0 40px rgba(0, 122, 255, 0.6),
+      inset 0 0 20px rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(0, 225, 255, 1);
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  }
+
+.legenda {
+  font-size: 1.25rem;
+  color: #c7c7c7;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .Price {
+    position: relative;
+    gap: 20px;
+    padding: 50px 0px;
+    background: url(../../assets/Photo/price.bg-mobile.png) no-repeat top center;
+    background-size: contain;
+    min-height: 120vh;
+  }
+
+  .container-price {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+
+  .container-price li {
+    order: 2; /* Define a ordem dos itens */
+  }
+
+  .container-price li:nth-child(2) {
+    order: 1; /* Define a ordem do segundo item */
+  }
+
+  .price-item, .description {
+    width: 100%; /* Ajusta a largura dos itens */
+  }
+
+  .price-card {
+    width: 350px; /* Mantém a largura fixa do card de preço */
+  }
+
+  .price-card p {
+    text-align: center;
+  }
+
+  .container-price li {
+    text-align: center;
+  }
+}
