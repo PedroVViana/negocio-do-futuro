@@ -21,7 +21,7 @@
     display: inline-flex;
     align-items: center;
     padding: 0.55rem 1.5rem;
-    background-color: #25d366;
+    background: linear-gradient(90deg, #00ff00, #00b300); 
     color: #fff;
     font-size: 1rem;
     font-weight: bold;

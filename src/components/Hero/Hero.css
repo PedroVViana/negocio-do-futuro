@@ -178,19 +178,15 @@
 .heroButton a {
   display: inline-block;
   padding: 0.75rem 2.5rem;
-  background: linear-gradient(to right, #00c3ff, #006aff);
+  background: linear-gradient(90deg, #00ff00, #00b300); /* Gradiente verde */
   color: white;
   font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
   border-radius: 50px;
   transition: all 0.3s ease;
-  box-shadow: 
-    0 0 10px #00c3ff,
-    0 0 20px rgba(0, 195, 255, 0.7),
-    0 0 30px rgba(0, 122, 255, 0.5),
-    inset 0 0 15px rgba(255, 255, 255, 0.3);
-  border: 2px solid rgba(0, 225, 255, 0.8);
+  box-shadow: 0 0 10px #00ff00, 0 0 20px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 179, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(0, 255, 0, 0.8);
   position: relative;
   overflow: hidden;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
@@ -207,7 +203,7 @@
   right: -2px;
   bottom: -2px;
   z-index: -1;
-  background: linear-gradient(90deg, #00e1ff, #00a2ff, #0057ff, #00a2ff, #00e1ff);
+  background: linear-gradient(90deg, #00ff00, #00b300); /* Gradiente verde */
   background-size: 400% 400%;
   border-radius: 50px;
   opacity: 0.7;
@@ -217,12 +213,8 @@
 
 .heroButton a:hover {
   transform: translateY(-3px);
-  box-shadow: 
-    0 0 15px #00c3ff,
-    0 0 25px rgba(0, 195, 255, 0.8),
-    0 0 40px rgba(0, 122, 255, 0.6),
-    inset 0 0 20px rgba(255, 255, 255, 0.4);
-  border: 2px solid rgba(0, 225, 255, 1);
+  background: linear-gradient(90deg, #00ff00, #00b300); /* Gradiente verde */
+  box-shadow: 0 0 20px #00ff00, 0 0 30px rgba(0, 255, 0, 0.7), 0 0 40px rgba(0, 179, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.3);
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
 }
@@ -230,16 +222,16 @@
 @keyframes neonPulse {
   0% {
     box-shadow: 
-      0 0 10px #00c3ff,
-      0 0 20px rgba(0, 195, 255, 0.6),
-      0 0 30px rgba(0, 122, 255, 0.4);
+      0 0 10px #00ff00,
+      0 0 20px rgba(0, 255, 0, 0.6),
+      0 0 30px rgba(0, 179, 0, 0.4);
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
   }
   100% {
     box-shadow: 
-      0 0 15px #00c3ff,
-      0 0 30px rgba(0, 195, 255, 0.8),
-      0 0 45px rgba(0, 122, 255, 0.6);
+      0 0 15px #00ff00,
+      0 0 30px rgba(0, 255, 0, 0.8),
+      0 0 45px rgba(0, 179, 0, 0.6);
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
   }
 }
@@ -294,7 +286,7 @@
   position: absolute;
   width: 100%;
   height: 20px;
-  background: linear-gradient(to right, #62d3ff, #51ceff, #42c3ff, #0085e7);
+  background: #51ceff;
   top: 50%;
   transform: translateY(-50%);
   box-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
@@ -316,7 +308,7 @@
   width: 50px;
   height: 25px;
   border-radius: 0 0 50px 50px;
-  background: linear-gradient(to right, #62d3ff, #51ceff, #42c3ff);
+  background: #51ceff;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -538,13 +530,6 @@
   .heroButton a {
     padding: 0.7rem 1.3rem;
     font-size: 0.85rem;
-    box-shadow: 
-      0 0 10px #00c3ff,
-      0 0 20px rgba(0, 195, 255, 0.7),
-      0 0 30px rgba(0, 122, 255, 0.5),
-      inset 0 0 15px rgba(255, 255, 255, 0.3) !important;
-    border: 2px solid rgba(0, 225, 255, 0.8) !important;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7) !important;
   }
 
   .section-divider {
