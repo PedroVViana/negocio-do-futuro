@@ -70,21 +70,21 @@
 
 .price-card h3 {
   font-size: 1.5rem;
-  color: #c7c7c7;
+  color: #fff;
   line-height: 1.2;
   text-align: center;
 }
 
 .price-card h4 {
   font-size: 2rem;
-  color: #c7c7c7;
+  color: #fff;
   line-height: 1.5;
   text-align: center;
 }
 
 .price-card .price-avista {
   font-size: 1.2rem;
-  color: #c7c7c7;
+  color: #fff;
   line-height: 1.2;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -97,14 +97,14 @@
 
 .price-card .price-parcelado {
   font-size: 1.5rem;
-  color: #c7c7c7;
+  color: #fff;
   line-height: 1.2;
   text-align: center;
 }
 
 .price-card .price-parcelado span {
   font-size: 2rem;
-  color: #c7c7c7;
+  color: #fff;
 }
 
 .price-card .price-parcelado i {
@@ -116,7 +116,7 @@
   font-size: 0.55rem;
   margin-bottom: 10px;
   line-height: 1.5;
-  color: #c7c7c7;
+  color: #fff;
 }
 
 .price-card a {
@@ -168,7 +168,7 @@
 
 .legenda {
   font-size: 1.25rem;
-  color: #c7c7c7;
+  color: #fff;
   text-align: center;
   display: flex;
   justify-content: center;
