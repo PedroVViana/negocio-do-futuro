@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaBook, FaRocket } from 'react-icons/fa'; // Importando ícones do react-icons
 import './Price.css';
 
 function Price() {
@@ -29,8 +30,14 @@ function Price() {
         </li>
       </ul>
       <div className="legenda">
-        <p>Este é sua chance de dominar o tráfego pago transformar sua carreira!</p>
-        <p>Garanta seu e-book agora e tenha acesso imediato ao conteúdo!</p>
+        <div className="legenda-card">
+          <FaBook className="legenda-icon" />
+          <p>Este é sua chance de dominar o tráfego pago e transformar sua carreira!</p>
+        </div>
+        <div className="legenda-card">
+          <FaRocket className="legenda-icon" />
+          <p>Garanta seu e-book agora e tenha acesso imediato ao conteúdo!</p>
+        </div>
       </div>
     </section>
   );

@@ -143,28 +143,28 @@
 }
 
 .price-card a::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    z-index: -1;
-    background: linear-gradient(90deg, #00ff00, #00b300);
-    background-size: 400% 400%;
-    border-radius: 50px;
-    opacity: 0.7;
-    animation: neonShimmer 3s ease infinite;
-    filter: blur(8px);
-  }
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(90deg, #00ff00, #00b300);
+  background-size: 400% 400%;
+  border-radius: 50px;
+  opacity: 0.7;
+  animation: neonShimmer 3s ease infinite;
+  filter: blur(8px);
+}
 
-  .price-card a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 20px #00ff00, 0 0 30px rgba(0, 255, 0, 0.7), 0 0 40px rgba(0, 179, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.3);
-    border: 2px solid rgba(0, 255, 0, 0.8);
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
-  }
+.price-card a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #00ff00, 0 0 30px rgba(0, 255, 0, 0.7), 0 0 40px rgba(0, 179, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(0, 255, 0, 0.8);
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
 
 .legenda {
   font-size: 1.25rem;
@@ -173,8 +173,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+}
+
+.legenda-card {
+  display: flex;
+  align-items: center;
   flex-direction: column;
+  width: 400px;
+  gap: 20px;
+  background: #111;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin: 0.5rem 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 2px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.legenda-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.legenda-icon {
+  font-size: 3rem;
+  color: #00c3ff;
+  margin-right: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -213,5 +239,40 @@
 
   .container-price li {
     text-align: center;
+  }
+
+  .legenda {
+    gap: 20px;
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  .legenda-card {
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .legenda-icon {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .legenda {
+    gap: 15px;
+    padding: 1.5rem;
+  }
+
+  .legenda p {
+    font-size: 1rem;
+  }
+
+  .legenda-card {
+    padding: 0.75rem;
+  }
+
+  .legenda-icon {
+    font-size: 3rem;
   }
 }
