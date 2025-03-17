@@ -1,5 +1,5 @@
-import React from 'react'
-import './Price.css'
+import React from 'react';
+import './Price.css';
 
 function Price() {
   return (
@@ -18,7 +18,8 @@ function Price() {
         <li>
           <div className="price-card">
             <h3>Se torne um mestre do tráfego por apenas</h3>
-            <h4><span>5X</span><i>9</i>,40</h4>
+            <h4 className="price-parcelado"><span>5X</span><i>9</i>,40</h4>
+            <h4 className="price-avista">ou por <span>R$ 47,00</span> à vista</h4>
             <a href="#" target="_blank" rel="noopener noreferrer">Garantir Agora!</a>
             <p>Produto 100% Digital | Ambiente Criptografado | 100% Seguro</p>
           </div>
@@ -32,7 +33,7 @@ function Price() {
         <p>Garanta seu e-book agora e tenha acesso imediato ao conteúdo!</p>
       </div>
     </section>
-  )
+  );
 }
 
-export default Price
+export default Price;

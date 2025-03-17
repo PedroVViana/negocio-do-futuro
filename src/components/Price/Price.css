@@ -82,14 +82,34 @@
   text-align: center;
 }
 
-.price-card h4 span {
-  font-size: 1rem;
+.price-card .price-avista {
+  font-size: 1.2rem;
+  color: #c7c7c7;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.price-card .price-avista span {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.price-card .price-parcelado {
+  font-size: 1.5rem;
+  color: #c7c7c7;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.price-card .price-parcelado span {
+  font-size: 2rem;
   color: #c7c7c7;
 }
 
-.price-card h4 i {
+.price-card .price-parcelado i {
   font-size: 6rem;
-  color: #c7c7c7;
+  color: #fff;
 }
 
 .price-card p {
