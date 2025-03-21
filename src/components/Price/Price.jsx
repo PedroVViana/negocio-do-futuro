@@ -3,8 +3,32 @@ import { FaBook, FaRocket } from 'react-icons/fa'; // Importando ícones do reac
 import './Price.css';
 
 function Price() {
+  // Função para rastrear evento de compra 
+  const handlePurchaseClick = () => {
+    // Verificar se o fbq está disponível
+    if (typeof window.fbq !== 'undefined') {
+      // Rastrear evento de início de checkout
+      window.fbq('track', 'InitiateCheckout', {
+        value: 47.00,
+        currency: 'BRL',
+        content_name: 'E-Book Negócio do Futuro',
+        content_type: 'product',
+        content_ids: ['ebook-negocio-futuro']
+      });
+      
+      // Rastrear evento personalizado
+      window.fbq('trackCustom', 'TEST60593', {
+        action: 'purchase_click',
+        product: 'E-Book Negócio do Futuro'
+      });
+    }
+  };
+
   return (
-    <section className='Price'>
+    <section className='Price' id="price">
+      <div className="seo-title" style={{display: 'none'}}>
+        <h1>E-Book Negócio do Futuro - Tráfego Pago</h1>
+      </div>
       <ul className="container-price">
         <li>
           <div className="price-item">
@@ -19,9 +43,17 @@ function Price() {
         <li>
           <div className="price-card">
             <h3>Se torne um mestre do tráfego por apenas</h3>
-            <h4 className="price-parcelado"><span>5X</span><i>9</i>,40</h4>
+            <h4 className="price-parcelado"><span>5X</span><i>10</i>,26</h4>
             <h4 className="price-avista">ou por <span>R$ 47,00</span> à vista</h4>
-            <a href="#" target="_blank" rel="noopener noreferrer">Garantir Agora!</a>
+            <a 
+              href="https://pay.kiwify.com.br/dpIL4Av" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={handlePurchaseClick}
+              aria-label="Clique para comprar o E-Book de Tráfego Pago"
+            >
+              Garantir Agora!
+            </a>
             <p>Produto 100% Digital | Ambiente Criptografado | 100% Seguro</p>
           </div>
         </li>
@@ -31,11 +63,11 @@ function Price() {
       </ul>
       <div className="legenda">
         <div className="legenda-card">
-          <FaBook className="legenda-icon" />
+          <FaBook className="legenda-icon" aria-hidden="true" />
           <p>Este é sua chance de dominar o tráfego pago e transformar sua carreira!</p>
         </div>
         <div className="legenda-card">
-          <FaRocket className="legenda-icon" />
+          <FaRocket className="legenda-icon" aria-hidden="true" />
           <p>Garanta seu e-book agora e tenha acesso imediato ao conteúdo!</p>
         </div>
       </div>

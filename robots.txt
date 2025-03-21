@@ -1,0 +1,9 @@
+# Permitir acesso para todos os robôs de busca
+User-agent: *
+Allow: /
+
+# Melhorar taxa de rastreamento
+Crawl-delay: 5
+
+# Caminho para o sitemap
+Sitemap: https://negociodofuturo.com.br/sitemap.xml 
